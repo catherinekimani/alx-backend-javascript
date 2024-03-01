@@ -3,6 +3,7 @@ const request = require("request");
 const { describe, it } = require("mocha");
 
 const expect = require("chai").expect;
+const app = require("./api"); 
 
 describe("Home page", function() {
     const options = {
@@ -82,7 +83,7 @@ describe("Login", function() {
         url: "http://localhost:7865/login",
         json: true,
 	    body: {
-        user: 'JOE'
+        user: 'KAY'
         }
     };
     request.post(opt, function(err, res, body) {
@@ -95,7 +96,7 @@ describe("Login", function() {
         url: "http://localhost:7865/login",
         json: true,
         body: {
-        user: 'JOE'
+        user: 'KAY'
         }
     };
     request.post(opts, function(err, res, body) {
@@ -112,7 +113,7 @@ describe("Login", function() {
         url: "http://localhost:7865/login",
         json: true,
         body: {
-        usr: 'JOE'
+        usr: 'KAY'
         }
     };
     request.post(op, function(err, res, body) {
